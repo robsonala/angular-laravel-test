@@ -74,7 +74,7 @@ The intial project includes:
 > Please ensure you add a commit after each step is completed.
 >
 
-- [ ] Update `./app/src/app/service/students.service.ts` to return 3 students from `getStudents`
+- [x] Update `./app/src/app/service/students.service.ts` to return 3 students from `getStudents`
 - [ ] Fetch students from the `StudentsService` within the `StudentsComponent` and list them into the table
   provided
 - [ ] Add a column to display the student grades. Style the display of the grades so that it has three colorations:
