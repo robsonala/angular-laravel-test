@@ -77,7 +77,7 @@ The intial project includes:
 - [x] Update `./app/src/app/service/students.service.ts` to return 3 students from `getStudents`
 - [x] Fetch students from the `StudentsService` within the `StudentsComponent` and list them into the table
   provided
-- [ ] Add a column to display the student grades. Style the display of the grades so that it has three colorations:
+- [x] Add a column to display the student grades. Style the display of the grades so that it has three colorations:
     - Green: average grade greater than 80%
     - Orange: average grade less than 80% and greater than 50%
     - Red: average grade less than 50%

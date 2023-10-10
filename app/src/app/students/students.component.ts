@@ -5,6 +5,7 @@ import { Student } from "../service/model/student";
 @Component({
                selector:    'app-students',
                templateUrl: './students.component.html',
+               styleUrls: ['./students.component.css']
            })
 export class StudentsComponent {
     public students: Student[] = [];
