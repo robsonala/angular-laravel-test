@@ -53,7 +53,7 @@ Please enter/replace your details below.
 | Email       | robsonala@gmail.com  |
 | Date        | 2023-10-10           |
 | Start Time  | 20:37                |
-| Finish Time | xx:xx                |
+| Finish Time | 21:42                |
 
 ---
 
