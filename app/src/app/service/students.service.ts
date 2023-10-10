@@ -1,41 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from "rxjs";
 import { Student, StudentModel } from "./model/student";
+import { HttpClient } from '@angular/common/http';
+import { environment } from "../../environments/environment";
 
 @Injectable({ providedIn: 'root' })
 export class StudentsService {
+  private studentsApiUrl = '/students';
 
-    constructor() { }
+  constructor(private http: HttpClient) {}
 
-    getStudents(): Observable<Student[]> {
-        let students: Student[] = [
-          new StudentModel(<Student>({
-            id: 1,
-            first_name: 'Lorem',
-            last_name: 'Ipsum',
-            email: 'lorem.ipsum@email.com',
-            subject: 'English',
-            grade: 10
-          })),
-          new StudentModel(<Student>({
-            id: 2,
-            first_name: 'Dolor',
-            last_name: 'Sit',
-            email: 'dolor.sit@email.com',
-            subject: 'Geography',
-            grade: 7
-          })),
-          new StudentModel(<Student>({
-            id: 3,
-            first_name: 'Amet',
-            last_name: 'Consectetur',
-            email: 'amet.consectetur@email.com',
-            subject: 'Maths',
-            grade: 3
-          }))
-        ];
+  getStudents(): Observable<Student[]> {
+    let students: Student[] = [];
 
-        return of<Student[]>(students);
-    }
+    this.http.get<Student[]>(environment.apiBaseUrl + this.studentsApiUrl).subscribe(res => {
+      for (const student of res) {
+        try {
+          students.push(new StudentModel(<Student>(student)));
+        } catch (e: any) {
+          console.error(e);
+        }
+      }
+    });
+
+    return of<Student[]>(students);
+  }
 
 }

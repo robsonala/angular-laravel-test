@@ -27,11 +27,11 @@ export class StudentModel implements Student {
   }
 
   get gradeColour(): string {
-    if (this.grade >= 8) {
+    if (this.grade >= 80) {
       return 'green';
     }
 
-    if (this.grade >= 5) {
+    if (this.grade >= 50) {
       return 'orange';
     }
 

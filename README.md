@@ -81,7 +81,7 @@ The intial project includes:
     - Green: average grade greater than 80%
     - Orange: average grade less than 80% and greater than 50%
     - Red: average grade less than 50%
-- [ ] Update `StudentsService` to pull students from the API (this should be available
+- [x] Update `StudentsService` to pull students from the API (this should be available
   via `http://127.0.0.1:8000/api/students/`)
 - [ ] Allow a student to be selected from the list, and display their full details (on the existing page, or a new page
   inc. `id` and `email`)
