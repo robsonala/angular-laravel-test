@@ -7,10 +7,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr *ngFor="let student of students;">
+      <td>{{student.first_name}}</td>
+      <td>{{student.last_name}}</td>
+      <td>{{student.subject}}</td>
     </tr>
     </tbody>
 </table>
