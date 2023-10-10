@@ -1,18 +1,24 @@
 <table class="table table-striped">
-    <thead>
+  <thead>
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Subject</th>
-        <th>Grade</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Subject</th>
+      <th>Grade</th>
+      <th></th>
     </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let student of students;">
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students;" [class.selected]="student === selectedStudent">
       <td>{{student.first_name}}</td>
       <td>{{student.last_name}}</td>
       <td>{{student.subject}}</td>
       <td class="grade {{student.gradeColour}}">{{student.grade}}</td>
+      <td>
+        <button type="button" (click)="onSelect(student)" class="btn btn-link">View</button>
+      </td>
     </tr>
-    </tbody>
+  </tbody>
 </table>
+
+<app-student [student]="selectedStudent"></app-student>

@@ -1,0 +1,20 @@
+<div *ngIf="student">
+  <hr />
+  <form class="row g-3">
+    <div class="col-12">
+      <h2>#{{student.id}} {{student.first_name}} {{student.last_name}}</h2>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" readonly value="{{student.email}}" />
+    </div>
+    <div class="col-12">
+      <label class="form-label">Subject</label>
+      <input type="text" class="form-control" readonly value="{{student.subject}}" />
+    </div>
+    <div class="col-12">
+      <label class="form-label">Grade</label>
+      <input type="text" class="form-control grade {{student.gradeColour}}" readonly value="{{student.grade}}" />
+    </div>
+  </form>
+</div>

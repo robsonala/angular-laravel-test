@@ -1,21 +1,17 @@
-table tr.selected {
-  font-weight: bold;
-}
-
-table td.grade {
+input.grade {
   color: white;
   font-weight: bold;
 }
 
-table td.grade.green {
+input.grade.green {
   background-color: green;
 }
 
-table td.grade.red {
+input.grade.red {
   background-color: red;
 }
 
-table td.grade.orange {
+input.grade.orange {
   background-color: orange;
 }
 
