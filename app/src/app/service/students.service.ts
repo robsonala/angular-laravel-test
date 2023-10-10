@@ -10,10 +10,15 @@ export class StudentsService {
 
   constructor(private http: HttpClient) {}
 
-  getStudents(): Observable<Student[]> {
-    let students: Student[] = [];
+  getStudents(searchTerm: string | null): Observable<Student[]> {
+    const students: Student[] = [];
+    const params: any = {};
 
-    this.http.get<Student[]>(environment.apiBaseUrl + this.studentsApiUrl).subscribe(res => {
+    if (searchTerm !== null) {
+      params.q = searchTerm;
+    }
+
+    this.http.get<Student[]>(environment.apiBaseUrl + this.studentsApiUrl, { params: params }).subscribe(res => {
       for (const student of res) {
         try {
           students.push(new StudentModel(<Student>(student)));

@@ -12,9 +12,17 @@ export class StudentsComponent {
   public selectedStudent?: Student;
 
   constructor(private studentService: StudentsService) {
-    studentService.getStudents().subscribe(res => {
+    this.loadStudents(null);
+  }
+
+  private loadStudents(searchTerm: string | null): void {
+    this.studentService.getStudents(searchTerm).subscribe(res => {
       this.students = res;
     })
+  }
+
+  filterResults(value: string): void {
+    this.loadStudents(value);
   }
 
   onSelect(student: Student): void {
