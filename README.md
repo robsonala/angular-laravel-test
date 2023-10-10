@@ -47,13 +47,14 @@ In order to complete this test you will need the following tools:
 
 Please enter/replace your details below.
 
-|             |                      |
-|-------------|----------------------|
-| Name        | Robson Alviani       |
-| Email       | robsonala@gmail.com  |
-| Date        | 2023-10-10           |
-| Start Time  | 20:37                |
-| Finish Time | 21:42                |
+|                       |                      |
+|-----------------------|----------------------|
+| Name                  | Robson Alviani       |
+| Email                 | robsonala@gmail.com  |
+| Date                  | 2023-10-10           |
+| Start Time            | 20:37                |
+| Finish Time           | 21:42                |
+| Finish Time w/ extras | 22:06                |
 
 ---
 
