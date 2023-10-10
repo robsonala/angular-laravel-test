@@ -88,7 +88,7 @@ The intial project includes:
 
 **Extras for if you have time:**
 
-- [ ] Update the API to support searching of students; allowing partial matches on first_name OR last_name
+- [x] Update the API to support searching of students; allowing partial matches on first_name OR last_name
 - [ ] Add a search component to the app, above the table, allowing the students to be filtered using the new search
   capability
 
